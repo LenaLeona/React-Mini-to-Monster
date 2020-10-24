@@ -1,5 +1,5 @@
 ### App Walkthough GIF
-<img src="https://github.com/LenaLeona/React-Mini-to-Monster/blob/main/weather-app/weather.gif><br>
+<img src="https://github.com/LenaLeona/React-Mini-to-Monster/blob/main/weather-app/weather.gif"><br>
 
 # Getting Started with Create React App
 
