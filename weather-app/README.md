@@ -1,3 +1,6 @@
+### App Walkthough GIF
+<img src="https://github.com/LenaLeona/React-Mini-to-Monster/blob/main/weather-app/weather.gif"><br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
