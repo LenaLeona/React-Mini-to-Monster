@@ -1,3 +1,6 @@
+### Walkthough 
+<img src="https://github.com/LenaLeona/React-Mini-to-Monster/blob/main/checkout/checkout.gif"><br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
