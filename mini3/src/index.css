@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  justify-content: center;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  border: 1px solid grey;
+  background-color: white; 
+}
