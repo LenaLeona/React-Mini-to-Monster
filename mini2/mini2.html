@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <word-shuffler word='An silent pond'></word-shuffler>
+  <word-shuffler word='A frog jumps into the pond'></word-shuffler>
+  <word-shuffler word='Splash, silence again'></word-shuffler>
+
+  <template id="template">
+    <style>
+      p {
+        font-weight: bold;
+      }
+    </style>
+    <p></p>
+  </template>
+
+
+  <script>
+    class MyWord extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({
+          mode: 'open'
+        })
+
+        let template = document.getElementById('template');
+        let content = template.content.cloneNode(true);
+        content.querySelector('p').innerHTML = this.getAttribute('word');
+
+        let colors = ['green', 'orange', 'blue', 'red', 'black'];
+        let randomColor = colors[Math.floor(Math.random() * colors.length)];
+        content.querySelector('p').style.color = randomColor;
+
+        this.shadowRoot.appendChild(content);
+      }
+
+      // function for shuffle the words randomly on click
+      shuffle() {
+        let a = this.getAttribute('word').split(""),
+        len = a.length;
+
+        for (let i = 0; i < len -1; i++) {
+          let j = Math.floor(Math.random() * (i+1));
+          let tmp = a[i];
+          a[i] = a[j];
+          a[j] = tmp;
+        }
+        this.shadowRoot.querySelector('p').innerHTML = a.join("");
+      }
+
+      connectedCallback() {
+        this.shadowRoot.querySelector('p')
+          .addEventListener('click',
+            () => this.shuffle())
+      }
+
+      disconnectedCallback() {
+        this.shadowRoot.querySelector('p')
+          .removeEventListener('click', this.shuffle())
+      }
+
+    }
+    window.customElements.define('word-shuffler', MyWord)
+  </script>
+</body>
+
+</html>
