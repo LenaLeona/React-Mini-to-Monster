@@ -4,8 +4,8 @@ interface Belongs {
   summary(): string; //can have functions inside the interface definition
 }
 
-//object首字母小写
-//object可以有interface没有的variables, 但interface里有的object也必须有
+//Instance首字母小写
+//instance可以有interface没有的variables, 但interface里有的object也必须有
 const oldCivic = {
   name: 'Yaris',
   year: new Date(),
@@ -15,7 +15,7 @@ const oldCivic = {
   }
 };
 
-//object2和object1有很多不同variables, 但都共同有summary()function
+//instance2和instance1有很多不同variables, 但都共同有summary()function
 const drink = {
   color: 'purple',
   carbonated: true,
